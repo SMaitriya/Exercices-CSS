@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamique avec CSS</title>
+    <style>
+        /* Cacher les éléments de la ligne si la case est cochée */
+        .row {
+            display: flex; /* Affiche les éléments en ligne */
+            margin-bottom: 10px; /* Espace entre les lignes */
+        }
+
+        .row input[type="checkbox"]:checked ~ .item {
+            display: none; /* Cacher les éléments lorsque la case est cochée */
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="row">
+        <input type="checkbox" id="checkbox1">
+        <label for="checkbox1">Cochez pour masquer</label>
+        <div class="item">Élément 1</div>
+        <div class="item">Élément 2</div>
+        <div class="item">Élément 3</div>
+    </div>
+
+    <div class="row">
+        <input type="checkbox" id="checkbox2">
+        <label for="checkbox2">Cochez pour masquer</label>
+        <div class="item">Élément A</div>
+        <div class="item">Élément B</div>
+        <div class="item">Élément C</div>
+    </div>
+
+
+    <h1>Exemple de :target</h1>
+    <style>
+        /* Styles par défaut */
+        .hidden {
+            display: none;
+        }
+        /* Styles appliqués à l'élément ciblé */
+        .content:target {
+            display: block;
+        }
+
+        .hidden:empty {
+            color: red;
+        }
+    </style>
+
+
+    <h2>Sections</h2>
+    <ul>
+        <li><a href="#section1">Section 1</a></li>
+        <li><a href="#section2">Section 2</a></li>
+        <li><a href="#section3">Section 3</a></li>
+    </ul>
+
+    <div id="section1" class="content hidden">
+        <h3>Section 1</h3>
+        <p>Contenu de la section 1.</p>
+    </div>
+    <div id="section2" class="content hidden">
+        <h3>Section 2</h3>
+        <p>Contenu de la section 2.</p>
+    </div>
+    <div id="section3" class="content hidden">
+        <h3>Section 3</h3>
+        <p>Contenu de la section 3.</p>
+    </div>
+
+
+
+</body>
+</html>
