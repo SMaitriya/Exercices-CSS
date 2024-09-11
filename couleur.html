@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container">
+
+
+        <ul>
+            <li>1er ligne </li>
+            <li>2ème ligne</li>
+            <li>3ème ligne</li>
+            <li>4ème ligne</li>
+            <li>5ème ligne</li>
+            <li>6ème ligne</li>
+            <li>7ème ligne</li>
+            <li>8ème ligne</li>
+        </ul>
+
+        </ul>
+    </div>
+
+    <style>
+        .container {
+            width: 30em;
+            text-decoration: none;
+
+
+        }
+
+        ul {
+            padding: 0;
+            /* Enlève le padding par défaut du ul */
+            margin: 0;
+            /* Enlève la marge par défaut du ul */
+        }
+
+        ul li {
+            border: solid black;
+            list-style-type: none;
+
+        }
+
+        li:nth-child(even) {
+            background: #999999;
+            color: #fff;
+
+        }
+
+        li:nth-child(odd) {
+            background-color: darkred;
+
+            color: #fff;
+
+
+        }
+
+        li:nth-child(7) {
+            background-color: green;
+        }
+
+        li:nth-child(3n) {
+            background-color: blue;
+        }
+    </style>
+
+</body>
+
+</html>
