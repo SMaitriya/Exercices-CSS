@@ -1,67 +1,62 @@
 <!DOCTYPE HTML>
 <html>
-
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <title>TD Sélecteur d'attribut</title>
-  <link rel="stylesheet" href="C:\wamp64\www\sorbonne\photo.css">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>TD Sélecteur d'attribut</title>
+<link rel="stylesheet" href="C:\wamp64\www\sorbonne\photo.css">
 </head>
 
 <style>
-  label {
-    display: block;
-  }
+label {
+	display:block;
+}
+input {
+	float:left;
 
-  input {
-    float: left;
-
-  }
-
+}
 
 
 
-  input[type="radio"]:checked[id="1"]~img[longdesc^="https"] {
-    border: 1em solid yellow;
-  }
 
-  input[type="radio"]:checked[id="2"]~span::after {
-    content: attr(title);
-    position: relative;
-  }
+input[type="radio"]:checked[id="1"]~img[longdesc^="https"] {
+  border: 1em solid yellow;
+}
 
-  input[type=radio]:checked[id="3"]~img[alt*="lunette"]:not([alt*="barbe"]) {
-    border: 1em solid red;
-  }
+input[type="radio"]:checked[id="2"]~span::after {
+  content: attr(title);
+  position: relative;
+}
 
-  input[type=radio]:checked[id="4"]~img[alt*="garcon"][title^="garcon"] {
-    border: 1em solid blue;
-  }
+input[type=radio]:checked[id="3"]~img[alt*="lunette"]:not([alt*="barbe"]) {
+  border: 1em solid red;
+}
+
+input[type=radio]:checked[id="4"]~img[alt*="garcon"][title^="garcon"]{
+  border: 1em solid blue;
+}
+
+
+
+
+
+
+
+
+
 </style>
 </head>
-
 <body>
-  <p>Un florilège de sélecteurs (adjacent, frère, enchassement, cheked, content) à mettre en oeuvre pour une interaction
-    amusante</p>
-  <p>Au clic sur le radio bouton, votre CSS doit produire l'effet décrit en label du radio bouton (cf screenchot
-    ci-dessous)</p>
-  <input id="1" type="radio" name="RadioGroup1"><label for="1">Entoure les photos dont la desciption longue (attribut
-    &quot;longdesc&quot;) contient une url en https</label>
-  <input id="2" type="radio" name="RadioGroup1"><label for="2">Fait apparaitre le prénom de la personne après sa
-    photo</label>
-  <input id="3" type="radio" name="RadioGroup1"><label for="3">Entoure de rouge les photos dont l'attribut alt contient
-    lunette mais pas barbe</label>
-  <input id="4" type="radio" name="RadioGroup1"><label for="4">Entoure dont le alt et le title contienne le mot
-    garçon</label>
-  <img src="http://lp-projet-web.ovh/css3/tp/selecteurs/aymeric.png" width="83" height="100" alt="aymeric lp projet web"
-    longdesc="upmc.fr" title="projet"><span title="aymeric"></span>
-  <img src="http://lp-projet-web.ovh/css3/tp/selecteurs/baptiste.png" width="85" height="100"
-    alt="baptiste garcon  lunette barbe"><span title="baptiste"></span>
-  <img src="http://lp-projet-web.ovh/css3/tp/selecteurs/celine.png" width="89" height="100" alt="celine fille lunette"
-    longdesc="https://www.alternance.emploi.gouv.fr"><span title="celine"></span>
-  <img src="http://lp-projet-web.ovh/css3/tp/selecteurs/clement.png" width="74" height="100" alt="clement garcon  barbe"
-    title="garcon"><span title="clement"></span>
+<p>Un florilège de sélecteurs (adjacent, frère, enchassement, cheked, content) à mettre en oeuvre pour une interaction amusante</p>
+<p>Au clic sur le radio bouton, votre CSS doit produire l'effet décrit en label du radio bouton (cf screenchot ci-dessous)</p>
+  <input id="1" type="radio"  name="RadioGroup1"><label for="1">Entoure les photos dont la desciption longue (attribut &quot;longdesc&quot;) contient une url en https</label>
+  <input id="2" type="radio" name="RadioGroup1"><label for="2">Fait apparaitre le prénom de la personne après sa photo</label>
+  <input id="3" type="radio" name="RadioGroup1"><label for="3">Entoure de rouge les photos dont l'attribut alt contient lunette mais pas barbe</label>
+  <input id="4" type="radio" name="RadioGroup1"><label for="4">Entoure dont le alt et le title contienne le mot garçon</label>
+  <img src="http://lp-projet-web.ovh/css3/tp/selecteurs/aymeric.png" width="83" height="100" alt="aymeric lp projet web" longdesc="upmc.fr" title="projet"><span title="aymeric"></span>
+  <img src="http://lp-projet-web.ovh/css3/tp/selecteurs/baptiste.png" width="85" height="100" alt="baptiste garcon  lunette barbe"><span title="baptiste"></span>
+  <img src="http://lp-projet-web.ovh/css3/tp/selecteurs/celine.png" width="89" height="100" alt="celine fille lunette" longdesc="https://www.alternance.emploi.gouv.fr"><span title="celine"></span>
+  <img src="http://lp-projet-web.ovh/css3/tp/selecteurs/clement.png" width="74" height="100" alt="clement garcon  barbe" title="garcon"><span  title="clement"></span>
 
 
 </body>
-
 </html>
