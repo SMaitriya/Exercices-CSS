@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <style>
+
+       ul {
+            padding: 0;
+            margin: 2em;
+            list-style-type: none; /* Supprimer les puces de la liste */
+        }
+        ul li{
+            display: inline-block;
+            background-color: black;
+            color: white;
+            width: 5em;
+            height: 2em;
+            text-align: center;
+            border: 1px solid black;
+            padding-top: 0.5em;
+            border-radius: 5px;
+            font-size: large;
+            margin-right: 1em;
+            position: relative;
+            left: 2em;
+          
+
+        }
+
+        .trait {
+            border: 1px solid black;
+            height: 0.3em;
+            background-color: black;
+            position: relative;
+            top: 2em;
+            margin: 0;
+            padding: 0;
+
+        }
+
+
+
+        ul li:hover  {
+            color: black;
+            background-color: white;
+            transform: scale(1.2);
+
+
+        }
+
+
+    </style>
+
+    <ul class="menu">
+        <div class="trait"></div>
+
+        <li>Menu 1</li>
+        <li>Menu 2</li>
+        <li>Menu 3</li>
+        <li>Menu 4</li>
+        <li>Menu 5</li>
+
+       </ul>
+       
+</body>
+</html>
