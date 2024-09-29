@@ -6,12 +6,33 @@
     <title>Document</title>
 </head>
 <style>
+
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 50em;
+
+    }
+
+    fieldset {
+  border: 0;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+
     .InputAddOn {
 
 margin-bottom: 1.5em;
+display: flex;
+
+
+
 }
 
 .InputAddOn-field {
+    flex: 1;
 
 }
 .InputAddOn-field:not(:first-child) {
@@ -26,6 +47,8 @@ background-color: rgba(147, 128, 108, 0.1);
 color: #666666;
 font: inherit;
 font-weight: normal;
+
+
 }
 
 .InputAddOn-field,
