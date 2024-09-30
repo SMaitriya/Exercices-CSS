@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How to Create Dropdown Navigation Menu Using Flexbox</title>
+<style>
+* {  /*reset général à la base, qui de plus supprimera toute marge sur les listes li  */
+    margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body {
+/* la typographie général est précisée sur le body, une bonne habitude du bon intégrateur */
+    font-size: 20px;
+    font-family: Poppins;
+}
+nav {
+    width: 80%;
+    margin: 0 auto;  /*pour centrer le bloc nav (menu) */
+}
+nav a {
+/* on habille les liens a couleur, etc. */
+    color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+	text-transform: uppercase;
+/* on stabilise les hauteurs des liens pour un positionnement facile des sous-listes  */
+    height: 100%;
+/* astuce pour centrer verticalement et horizontalement le texte du lien au sein de son li */
+/* on déclare la balise a comme un container flex et on distribue les 2 attributs de centrage horizontal et vertical*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+nav li:hover {
+/* changement de couleur au survol des items  */
+	background: tomato;
+}
+nav ul {
+/* suppression des puces de tous les listes de la barre de navigation */
+    list-style: none;
+}
+ul.menu {
+/* gestion en container flex du premier niveau : les items seront placés horizontalement */
+    display: flex;
+/* centration verticale des items (li) */
+    align-items: center;
+}
+nav li {
+/* pour répartir régulièrement toute la place disponible, les items sont tous déclarés flex:1 */
+    flex:1;
+    height: 2em;
+/* centrer le texte à l'intérieur de chaque item */
+    text-align: center;
+    background: #cb3529;
+}
+ul.dropdown-1 {
+/* pour sortir les sous-menus du flux (se supperpose sur le texte qui suit), on déclare un attribut "position" */
+    position: relative;
+/* pour le faire initialement disparaître */
+    display: none;
+}
+.menu>li:hover ul.dropdown-1 {
+/* appraition du sous-menu au survol de son entete */
+    display: block;
+}
+ul.dropdown-2 {
+    position: relative;
+/* Décaler le sous-sous-menu afin qu'il apparaissent au coté de son entête, à l'aide des doordonnées */
+    left:100%;
+    top:-100%;
+    display: none;
+}
+.dropdown-1>li:hover ul {
+/* réapparition du sous-sous-menu au survol de son entête */
+    display: block;
+}
+</style>
+</head>
+<body>
+<nav>
+  <ul class="menu">
+    <li><a href="41">Home</a></li>
+    <li><a href="*">About</a></li>
+    <li> <a href="#">Services</a>
+      <ul class="dropdown-1">
+        <li><a href="#">Logo Design</a></li>
+        <li><a href="#">WebDesign</a></li>
+        <li> <a href="1">Development</a>
+          <ul class="dropdown-2">
+            <li><a href="#">PHP</a></li>
+            <li><a href="*">Laravel</a></li>
+            <li><a href="*">WordPress</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+    <li><a href="#">Portfolio</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+</body>
+</html>
+
+</body>
