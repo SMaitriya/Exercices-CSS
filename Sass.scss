@@ -1,0 +1,43 @@
+header {
+    padding: 1%;
+  
+    .logo {
+      opacity: 0.5;
+  
+      :hover {
+        opacity: 1;
+      }
+    }
+  }
+  
+
+  #navigation {
+    ul {
+      list-style-type: none;
+    }
+  
+    ul > li {
+      float: left;
+  
+      
+      + li {
+        margin-left: 1em; // Correction de "lem" en "1em"
+      }
+    }
+  
+    a {
+      text-decoration: none;
+  
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+      }
+    }
+  
+    body#homepage & {
+      #nav-home {
+        font-weight: bold;
+      }
+    }
+  }
+  
