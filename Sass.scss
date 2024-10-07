@@ -10,7 +10,6 @@ header {
     }
   }
   
-
   #navigation {
     ul {
       list-style-type: none;
@@ -40,4 +39,11 @@ header {
       }
     }
   }
-  
+
+  /* boucle */ 
+
+  @for $i from 1 through 12 {
+    .column-#{$i} { 
+      width: 100% / 12 * $i; 
+    }
+  }

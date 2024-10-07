@@ -1,0 +1,32 @@
+
+
+
+
+@mixin fildariane($classname, $separateur){
+  nav.#{$classname} {
+
+    ul {
+        display: flex;
+        font-size: 16px;
+
+    }
+    
+
+    a { 
+        color: blue;
+        text-decoration: none;
+        margin-right: 2em;
+        
+    }
+
+    li {
+        list-style: ">";
+    }
+
+
+  }
+
+  }
+
+
+@include fildariane("breadcrumb", ">");  
